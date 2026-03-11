@@ -1,0 +1,6 @@
+Q = input()
+N = int(input())
+num = ord (Q)
+alp = chr (N+64)
+print(f"{Q}是字母表中第{num - 64}个字母.")
+print(f"字母表中第{N}个字母是{alp}.")

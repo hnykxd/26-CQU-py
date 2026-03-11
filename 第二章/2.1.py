@@ -1,0 +1,6 @@
+plane_name = input()
+a = float(input())
+v = float(input())
+length = v*v/(2*a)
+
+print(f"The acceleration of {plane_name} is {a:.2f} M / s, the take-off speed is {v:.2f} M / s, and the shortest take-off runway length is {length:.2f} M.")

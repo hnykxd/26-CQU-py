@@ -1,7 +1,7 @@
-import math
-l1 = float(input())
-l2 = float(input())
-V = 4/3*math.pi*(0.5*l1)*(0.5*l1)*(0.5*l1) + 4/3*math.pi*(0.5*l2)*(0.5*l2)*(0.5*l2)
-a = V**(1/3)
-print(f"正方体边长为:{a:.2f}.")
+m = int(input())
+n = int(input())
+B = (6*n-8*m)/(n-m)
+A = 8*m - m*B
+C = A/(10 - B)
+print(f"原有排队游客份数:{A:.1F}, 每分钟新到游客份数:{B:.1F}, 10口同开需{C:.1F}分钟清零待检票游客.")
 

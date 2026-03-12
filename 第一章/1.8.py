@@ -1,2 +1,6 @@
-print('刘慈欣在小说《三体》中写道:"不要轻视简单，简单意味着坚固，\n整个数学大厦，都是建立在这种简单到不能再简单，但在逻辑上坚如\n磐石的公理的基础上。"')
-
+a = float(input())
+b = float(input())
+m = float(input())
+n = float(input())
+answer = (a+b)/(m+n)
+print(f"两车交汇时长为{answer:.2f}秒.")

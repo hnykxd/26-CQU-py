@@ -1,20 +1,20 @@
-inf = input().upper()
+s = input().upper()
 
 try:
-    if inf.startswith('$'):
-        result = float(inf[1:]) * 6.78
-        print(f"￥{result:.2f}")
+    if s.startswith('$'):
+        result = float(s[1:]) * 6.78
+        print(f"&{result:.2f}")
     
-    elif inf.startswith('USD'):
-        result = float(inf[3:]) * 6.78
+    elif s.startswith('USD'):
+        result = float(s[3:]) * 6.78
         print(f"RMB{result:.2f}")
 
-    elif inf.startswith('￥'):
-        result = float(inf[1:]) / 6.78
+    elif s.startswith('&'):
+        result = float(s[1:]) / 6.78
         print(f"${result:.2f}")
 
-    elif inf.startswith('RMB'):
-        result = float(inf[3:]) / 6.78
+    elif s.startswith('RMB'):
+        result = float(s[3:]) / 6.78
         print(f"USD{result:.2f}")
     
     else:

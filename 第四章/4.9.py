@@ -1,15 +1,24 @@
-credit_all = 0
-gpasum = 0
-for i in range(5):
-    s = input().split()
-    lst = list(s)
-    score = float(lst[1])
-    credit = float(lst[2])
-    gpa = 4.0*(90 if score > 90 else score)/90
-    credit_all += credit
-    sum = gpa*credit
-    gpasum += sum
+s = input().upper()
 
-GPA = gpasum/credit_all
+try:
+    if s.startswith('$'):
+        result = float(s[1:]) * 6.78
+        print(f"&{result:.2f}")
+    
+    elif s.startswith('USD'):
+        result = float(s[3:]) * 6.78
+        print(f"RMB{result:.2f}")
 
-print(f"GPA:{GPA:.2f}")
+    elif s.startswith('&'):
+        result = float(s[1:]) / 6.78
+        print(f"${result:.2f}")
+
+    elif s.startswith('RMB'):
+        result = float(s[3:]) / 6.78
+        print(f"USD{result:.2f}")
+    
+    else:
+        print("Error")
+
+except ValueError:
+    print("Error")

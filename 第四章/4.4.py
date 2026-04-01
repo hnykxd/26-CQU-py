@@ -1,19 +1,6 @@
-s = eval(input())
-ave = sum(s)/len(s)
-averound = round(ave)
-try:
-    if ave == averound:
-        print(int(ave))
-    else:
-        print(f"{ave:.2f}")
+student = eval(input())
+info =  (student[1], student[2])
+avg = sum(student[5])/len(student[5])
+print(info)
+print("%.2f"%avg)
 
-except:
-    print('error')
-
-'''
-if ave % 1 == 0:
-    print(int(ave))
-else:
-    print(f"{ave:.2f}")
-
-'''

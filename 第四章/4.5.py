@@ -1,3 +1,3 @@
-s = eval(input()) 
-average = sum(s)/len(s)
-print(f"{average:.2f}")
+s = input()
+s1=s.upper()
+print(s1)

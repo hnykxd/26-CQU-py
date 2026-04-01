@@ -1,24 +1,15 @@
-s = input().upper()
+def main():
+    stra = input()
+    lista= list(stra)
+    print(''.join(replace_stars(lista)))
 
-try:
-    if s.startswith('$'):
-        result = float(s[1:]) * 6.78
-        print(f"&{result:.2f}")
-    
-    elif s.startswith('USD'):
-        result = float(s[3:]) * 6.78
-        print(f"RMB{result:.2f}")
+def replace_stars( str_list):  # 将所有*号移动到数组的左侧
+    j = len(str_list) - 1
+    for i in range(len(str_list) - 1, -1, -1):
+        if str_list[i] != '*':
+            str_list[i], str_list[j] = str_list[j], str_list[i]
+            j -= 1
+    return str_list
 
-    elif s.startswith('&'):
-        result = float(s[1:]) / 6.78
-        print(f"${result:.2f}")
+main()
 
-    elif s.startswith('RMB'):
-        result = float(s[3:]) / 6.78
-        print(f"USD{result:.2f}")
-    
-    else:
-        print("Error")
-
-except ValueError:
-    print("Error")

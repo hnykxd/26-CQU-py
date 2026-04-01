@@ -1,4 +1,5 @@
-s = input().split()
-n,m = map(int,input().split())
-s[n],s[m] = s[m],s[n]
-print(s)
+s = input()
+b = input()
+s1=s.replace(b, '')
+
+print(s1)

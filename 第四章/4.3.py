@@ -1,11 +1,6 @@
-lst = eval(input())
-n, m = map(int, input().split(','))
-try:
-    if n > len(lst) or m > len(lst):
-        print('error')
-    else:
-        del lst[n:m]
-        print(lst)
-    
-except:
-    print("error")
+icard = input()
+birthday = icard[6:10]+'-'+icard[10:12]+'-'+icard[12:14]
+mask = icard[:6]+"********"+icard[14:]
+print(birthday)
+print(mask)
+

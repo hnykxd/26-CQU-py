@@ -7,7 +7,6 @@ for ch in s:
 for key in sorted(dic):
     print(key, dic[key], sep = ',')
     
-print(dic)
 
 # s1 = eval(input())
 # s = ''.join(s1)
